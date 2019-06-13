@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mengyu.mapper.MoMapper">
+<!--查询列表  -->
+   <select id="gettlist" resultType="map">
+     select * from mo a left join status b on a.sid=b.sid
+     <where>
+        1=1
+        <if test="name!=''">
+            and name like '%${name}%'
+        </if>
+        <if test="docter!=''">
+            and docter like '%${docter}%'
+        </if>
+        <if test="time!=''">
+            and time=#{time}
+        </if>
+        order by a.time
+        <if test="aaa==1">
+           desc
+        </if>
+        <if test="aaa==0">
+           asc
+        </if>
+        ,a.timelong,a.year
+     </where>
+   </select>
+   
+   
+   
+   
+   
+   
+   <!-- 删除 -->
+   <delete id="delete">
+     delete from mo where id in (${ids});
+   </delete>
+   
+   
+   <!--下架  -->
+   <update id="xj0">
+     update mo set sid=1 where id=#{id}
+   </update>
+   <update id="xj1">
+     update mo set sid=2 where id=#{id}
+   </update>
+   <update id="xj2">
+     update mo set sid=0 where id=#{id}
+   </update>
+   
+   <!--查sid  -->
+   <select id="selectsid" resultType="int">
+     select sid from mo where id=#{id}
+   </select>
+   
+   
+</mapper>
