@@ -1,5 +1,5 @@
 package com.mengyu.bean;
-
+//注释
 public class Status {
 	private int sid;
 	private String sname;
