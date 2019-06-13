@@ -111,7 +111,7 @@ function cc(){
 				<button onclick="fx()">反选</button>
 			</td>
 			<td>影片名</td>
-			<td>周玉莹</td>
+			<td>周玉莹小仙女</td>
 			<td>导演</td>
 			<td>票价</td>
 			<td><button onclick="aa()">上映时间</button></td>
@@ -126,7 +126,7 @@ function cc(){
 			<tr>
 				<td><input type="checkbox" name="id" value="${l.id}"></td>
 				<td>${l.name}</td>
-				<td>李鹏城</td>
+				<td>李鹏城神经病</td>
 				<td>${l.docter}</td>
 				<td>${l.price}</td>
 				<td>${l.time}</td>
