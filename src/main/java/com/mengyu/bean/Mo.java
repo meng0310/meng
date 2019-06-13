@@ -1,5 +1,12 @@
 package com.mengyu.bean;
-
+/**
+ * 
+ * @ClassName: Mo 
+ * @Description: TODO
+ * @author: ZK
+ * @date: 2019年6月13日 上午11:21:56
+ */
+//张开的修改
 public class Mo {
 	private int id;
 	private String name;
